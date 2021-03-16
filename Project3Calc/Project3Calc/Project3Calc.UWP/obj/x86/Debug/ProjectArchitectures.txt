@@ -1,0 +1,1 @@
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc.UWP\Project3Calc.UWP.csproj;x86

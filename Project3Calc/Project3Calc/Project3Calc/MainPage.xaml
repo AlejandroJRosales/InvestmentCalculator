@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project3Calc.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="SlateGray" />
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                    <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="FontSize" Value="25" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                    <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                </Style>
+            </StackLayout.Resources>
+
+            <Grid RowSpacing="0"
+                ColumnSpacing="0">
+                
+                <!--Display and Labels-->
+
+                <!--Output Display-->
+                <Label x:Name="numberLabel"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="5"
+                    Text="0"
+                    Margin="0, 3"   />
+
+                <!--Investment Labels-->
+                <Grid Grid.Row="1" 
+                    Grid.RowSpan="4"
+                    Grid.ColumnSpan="4" 
+                    RowSpacing="0"
+                    ColumnSpacing="0"
+                    VerticalOptions="FillAndExpand">
+                    <Label 
+                        Grid.Row="0" 
+                        Grid.ColumnSpan="4"
+                        x:Name="labelStartingAmount"
+                        Text="Starting amount: $0"
+                        FontSize="17" />
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.ColumnSpan="4"
+                        x:Name="labelYears"
+                        Text="Years: 30"
+                        FontSize="17" />
+                    <Label 
+                        Grid.Row="2" 
+                        Grid.ColumnSpan="4"
+                        x:Name="labelRate"
+                        Text="Rate of return: 5%"
+                        FontSize="17" />
+                    <Label 
+                        Grid.Row="3" 
+                        Grid.ColumnSpan="4"
+                        x:Name="labelInvest"
+                        Text="Regular investment: $500"
+                        FontSize="17" />
+                    <Label 
+                        Grid.Row="4" 
+                        Grid.ColumnSpan="4"
+                        x:Name="labelFreq"
+                        Text="Frequency of investment: Monthly"
+                        FontSize="17" />
+                    <Label 
+                        Grid.Row="5" 
+                        Grid.ColumnSpan="4"
+                        x:Name="labelFinalBalance"
+                        Text="Final Balance: $0"
+                        FontSize="17" />
+                </Grid>
+
+                <!--Investment Operators-->
+                <Button x:Name="buttonFreq"
+                    Grid.Row="5"
+                    Grid.Column="4"
+                    BackgroundColor="RoyalBlue"
+                    Text="FREQ"
+                    Clicked="InvestmentButtonsClicked" />
+                <Picker x:Name="pickerFreq"
+                        HorizontalOptions="FillAndExpand"
+                        IsVisible="False">
+                    <Picker.Items>
+                        <x:String>Monthly</x:String>
+                        <x:String>Quarterly</x:String>
+                        <x:String>Annually</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button x:Name="buttonInvest"
+                    Grid.Row="5"
+                    Grid.Column="3"
+                    BackgroundColor="RoyalBlue"
+                    Text="INVEST"
+                    IsEnabled="True"
+                    Clicked="InvestmentButtonsClicked" />
+                <Button x:Name="buttonRate"
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    BackgroundColor="RoyalBlue"
+                    Text="RATE"
+                    IsEnabled="True"
+                    Clicked="InvestmentButtonsClicked" />
+                <Button x:Name="buttonYears"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    BackgroundColor="RoyalBlue"
+                    Text="YEARS"
+                    IsEnabled="True"
+                    Clicked="InvestmentButtonsClicked" />
+                <Button x:Name="buttonStart"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    BackgroundColor="RoyalBlue"
+                    Text="START"
+                    IsEnabled="True"
+                    Clicked="InvestmentButtonsClicked" />
+
+                
+                <!--Buttons-->
+                
+                <!--Clear Button-->
+                <Button x:Name="buttonClear"
+                    VerticalOptions="FillAndExpand"
+                    Grid.Row="1"
+                    Grid.RowSpan="3"
+                    Grid.Column="4"
+                    Text="C"
+                    Background="red"
+                    Clicked="ClearClicked" />
+                
+                <!--Final Button-->
+                <Button x:Name="buttonFinal"
+                    Grid.Row="4"
+                    Grid.Column="4"
+                    Text="FINAL"
+                    BackgroundColor="SaddleBrown"
+                    Clicked="FinalClicked" />
+                
+                <!--Number Pad-->
+                <Button x:Name="nine"
+                    Grid.Row="7"
+                    Grid.Column="3"
+                    Text="9"
+                    Clicked="NumberClicked" />
+                <Button x:Name="eight"
+                    Grid.Row="7"
+                    Grid.Column="2"
+                    Text="8"
+                    Clicked="NumberClicked" />
+                <Button x:Name="seven"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Text="7"
+                    Clicked="NumberClicked" />
+                <Button x:Name="six"
+                    Grid.Row="8"
+                    Grid.Column="3"
+                    Text="6"
+                    Clicked="NumberClicked" />
+                <Button x:Name="five"
+                    Grid.Row="8"
+                    Grid.Column="2"
+                    Text="5"
+                    Clicked="NumberClicked" />
+                <Button x:Name="four"
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Text="4"
+                    Clicked="NumberClicked" />
+                <Button x:Name="three"
+                    Grid.Row="9"
+                    Grid.Column="3"
+                    Text="3"
+                    Clicked="NumberClicked" />
+                <Button x:Name="two"
+                    Grid.Row="9"
+                    Grid.Column="2"
+                    Text="2"
+                    Clicked="NumberClicked" />
+                <Button x:Name="one"
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Text="1"
+                    Clicked="NumberClicked" />
+                <Button x:Name="inverse" 
+                    Grid.Row="10"
+                    Grid.Column="3"
+                    Text="+/-"
+                    Clicked="InverseOperatorClicked" />
+                <Button x:Name="blank" 
+                    Grid.Row="10"
+                    Grid.Column="2"
+                    Text=" " />
+                <Button x:Name="zero" 
+                    Grid.Row="10"
+                    Grid.Column="1"
+                    Text="0"
+                    Clicked="NumberClicked" />
+
+                <!--Arithmetic Operators-->
+                <Button x:Name="add"
+                    Grid.Row="7"
+                    Grid.Column="4"
+                    BackgroundColor="SaddleBrown"
+                    Text="+"
+                    Clicked="ArithmeticOperatorClicked" />
+                
+                <Button x:Name="subtract"
+                    Grid.Row="6"
+                    Grid.Column="4"
+                    BackgroundColor="SaddleBrown"
+                    Text="-"
+                    Clicked="ArithmeticOperatorClicked" />
+                <Button x:Name="multiply"
+                    Grid.Row="6"
+                    Grid.Column="3"
+                    BackgroundColor="SaddleBrown"
+                    Text="X"
+                    Clicked="ArithmeticOperatorClicked" />
+                <Button x:Name="divide"
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    BackgroundColor="SaddleBrown"
+                    Text="/"
+                    Clicked="ArithmeticOperatorClicked" />
+                <!--Disabled Buttons-->
+                <Button x:Name="disabled1"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    BackgroundColor="SaddleBrown"
+                    Text="%"
+                    IsEnabled="False" />
+                <Button x:Name="disabled2"
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    BackgroundColor="SaddleBrown"
+                    Text="1/X"
+                    IsEnabled="False" />
+                
+                <!--Solve-->
+                <Button x:Name="solve"
+                    Grid.Row="9"
+                    Grid.Column="4"
+                    BackgroundColor="SaddleBrown"
+                    Text="="
+                    Clicked="EqualSignClicked" />
+
+                <!--Memory Registry-->
+                <Button x:Name="mAdd"
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    BackgroundColor="SaddleBrown"
+                    Text="M+"
+                    Clicked="MemoryRegisterClicked" />
+                <Button x:Name="mSub"
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    BackgroundColor="SaddleBrown"
+                    Text="M-"
+                    Clicked="MemoryRegisterClicked" />
+                <Button x:Name="mr"
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    BackgroundColor="SaddleBrown"
+                    Text="MR"
+                    Clicked="MemoryRegisterClicked" />
+                <Button x:Name="mc"
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    BackgroundColor="SaddleBrown"
+                    Text="MC"
+                    Clicked="MemoryRegisterClicked" />
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

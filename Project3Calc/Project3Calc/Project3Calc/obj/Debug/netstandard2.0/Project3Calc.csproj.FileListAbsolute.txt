@@ -1,0 +1,14 @@
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\bin\Debug\netstandard2.0\Project3Calc.deps.json
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\bin\Debug\netstandard2.0\Project3Calc.dll
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\bin\Debug\netstandard2.0\ref\Project3Calc.dll
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\bin\Debug\netstandard2.0\Project3Calc.pdb
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\Project3Calc.csprojAssemblyReference.cache
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\Project3Calc.AssemblyInfoInputs.cache
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\Project3Calc.AssemblyInfo.cs
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\Project3Calc.csproj.CoreCompileInputs.cache
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\Project3Calc.dll
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\ref\Project3Calc.dll
+D:\Programming\Programming\SchoolProgramming\cse382\Projects\Project3Calc\Project3Calc\Project3Calc\obj\Debug\netstandard2.0\Project3Calc.pdb
